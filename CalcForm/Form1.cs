@@ -19,12 +19,14 @@ namespace CalcForm
             operations = new Dictionary<string, Func<double, double, double>>();
             operations.Add("+", (x, y) => x + y);
             operations.Add("-", (x, y) => x - y);
+            operations.Add("x^(1/y)", (x, y) => Math.Pow(x, 1 / y));
 
             list_operations.Items.Add("+");
             list_operations.Items.Add("-");
+            list_operations.Items.Add("x^(1/y)");
         }
 
-        
+
 
         private void list_operations_SelectedIndexChanged(object sender, EventArgs e)
         {
