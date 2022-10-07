@@ -46,7 +46,8 @@ namespace CalcForm
 
         private void btn_clear_all_Click(object sender, EventArgs e)
         {
-
+            textBox1.Text = "";
+            textBox2.Text = "";
         }
     }
 }
