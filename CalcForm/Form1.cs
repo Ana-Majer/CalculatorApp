@@ -20,10 +20,12 @@ namespace CalcForm
             operations.Add("+", (x, y) => x + y);
             operations.Add("-", (x, y) => x - y);
             operations.Add("x^(1/y)", (x, y) => Math.Pow(x, 1 / y));
+            operations.Add("cos", (x, y) => Math.Cos(x));
 
             list_operations.Items.Add("+");
             list_operations.Items.Add("-");
             list_operations.Items.Add("x^(1/y)");
+            list_operations.Items.Add("cos");
         }
 
 
