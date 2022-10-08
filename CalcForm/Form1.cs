@@ -22,6 +22,7 @@ namespace CalcForm
             operations.Add("+", (x, y) => x + y);
             operations.Add("-", (x, y) => x - y);
             operations.Add("x^(1/y)", (x, y) => Math.Pow(x, 1 / y));
+            operations.Add("sin", (x, y) => Math.Sin(x));
             operations.Add("cos", (x, y) => Math.Cos(x));
 
             UnaryOperations = new List<string>();
@@ -30,6 +31,7 @@ namespace CalcForm
             list_operations.Items.Add("+");
             list_operations.Items.Add("-");
             list_operations.Items.Add("x^(1/y)");
+            list_operations.Items.Add("sin");
             list_operations.Items.Add("cos");
         }
 
@@ -55,7 +57,8 @@ namespace CalcForm
 
         private void btn_clear_all_Click(object sender, EventArgs e)
         {
-
+            textBox1.Text = "";
+            textBox2.Text = "";
         }
     }
 }
