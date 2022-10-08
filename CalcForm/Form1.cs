@@ -20,6 +20,7 @@ namespace CalcForm
             operations.Add("+", (x, y) => x + y);
             operations.Add("-", (x, y) => x - y);
             operations.Add("x^(1/y)", (x, y) => Math.Pow(x, 1 / y));
+            operations.Add("sin", (x, y) => Math.Sin(x));
             operations.Add("cos", (x, y) => Math.Cos(x));
 
             list_operations.Items.Add("+");
