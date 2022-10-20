@@ -21,15 +21,18 @@ namespace CalcForm
             operations = new Dictionary<string, Func<double, double, double>>();
             operations.Add("+", (x, y) => x + y);
             operations.Add("-", (x, y) => x - y);
+            operations.Add("/", (x,y) => x/y);
+            operations.Add("*", (x,y) => x*y);
             operations.Add("x^(1/y)", (x, y) => Math.Pow(x, 1 / y));
             operations.Add("sin", (x, y) => Math.Sin(x));
             operations.Add("cos", (x, y) => Math.Cos(x));
-
             UnaryOperations = new List<string>();
             UnaryOperations.AddRange(new List<string>() { "sin", "cos", "tg" });
 
             list_operations.Items.Add("+");
             list_operations.Items.Add("-");
+            list_operations.Items.Add("/");
+            list_operations.Items.Add("*");
             list_operations.Items.Add("x^(1/y)");
             list_operations.Items.Add("sin");
             list_operations.Items.Add("cos");
