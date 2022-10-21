@@ -23,9 +23,11 @@ namespace CalcForm
             operations.Add("-", (x, y) => x - y);
             operations.Add("/", (x,y) => x/y);
             operations.Add("*", (x,y) => x*y);
+            operations.Add("^", (x, y) => Math.Pow(x, y));
             operations.Add("x^(1/y)", (x, y) => Math.Pow(x, 1 / y));
             operations.Add("sin", (x, y) => Math.Sin(x));
             operations.Add("cos", (x, y) => Math.Cos(x));
+            operations.Add("tg", (x, y) => Math.Tan(x));
             UnaryOperations = new List<string>();
             UnaryOperations.AddRange(new List<string>() { "sin", "cos", "tg" });
 
@@ -33,9 +35,11 @@ namespace CalcForm
             list_operations.Items.Add("-");
             list_operations.Items.Add("/");
             list_operations.Items.Add("*");
+            list_operations.Items.Add("^");
             list_operations.Items.Add("x^(1/y)");
             list_operations.Items.Add("sin");
             list_operations.Items.Add("cos");
+            list_operations.Items.Add("tg");
         }
 
         private void list_operations_SelectedIndexChanged(object sender, EventArgs e)
