@@ -17,6 +17,7 @@ namespace CalculatorAppTest
           new object [] { 7, 8, 1.275 }   ,
           new object [] { 21, 6, 1.661 }   ,
           new object [] { -21, 6, double.NaN }   ,
+          new object [] { 0, 6, 0 }   ,
 
 
 
