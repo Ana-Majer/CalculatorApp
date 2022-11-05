@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,7 +42,7 @@ namespace CalcForm
             string operation = (string)list_operations.SelectedItem;
             double operand2 = ParseTextBoxValue(textBox2);
             double result = operations[operation](operand1, operand2);
-            listView1.Items.Add(result.ToString());
+            listBox1.Items.Insert(0, result.ToString());
         }
 
         private double ParseTextBoxValue(TextBox textBox)
