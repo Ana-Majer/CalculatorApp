@@ -11,21 +11,21 @@ using System.Windows.Forms;
 namespace CalcForm
 {
     /// <summary>
-    /// Главная форма приложения
+    /// Р“Р»Р°РІРЅР°СЏ С„РѕСЂРјР° РїСЂРёР»РѕР¶РµРЅРёСЏ
     /// </summary>
     public partial class Form1 : Form
     {
         /// <summary>
-        /// Словарь операций 
+        /// РЎР»РѕРІР°СЂСЊ РѕРїРµСЂР°С†РёР№ 
         /// </summary>
         private Dictionary<string, Func<double, double, double>> operations;
         /// <summary>
-        /// Список унарных операций 
+        /// РЎРїРёСЃРѕРє СѓРЅР°СЂРЅС‹С… РѕРїРµСЂР°С†РёР№ 
         /// </summary>
         private List<string> UnaryOperations;
 
         /// <summary>
-        /// Конструктор по умолчанию
+        /// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
         /// </summary>
         public Form1()
         {
@@ -44,20 +44,20 @@ namespace CalcForm
         }
 
         /// <summary>
-        /// Обработчик события изменения индекса в списке операций
+        /// РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РёР·РјРµРЅРµРЅРёСЏ РёРЅРґРµРєСЃР° РІ СЃРїРёСЃРєРµ РѕРїРµСЂР°С†РёР№
         /// </summary>
-        /// <param name="sender">Отправитель события</param>
-        /// <param name="e">Аргументы события</param>
+        /// <param name="sender">РћС‚РїСЂР°РІРёС‚РµР»СЊ СЃРѕР±С‹С‚РёСЏ</param>
+        /// <param name="e">РђСЂРіСѓРјРµРЅС‚С‹ СЃРѕР±С‹С‚РёСЏ</param>
         private void list_operations_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBox2.Enabled = !UnaryOperations.Contains(list_operations.SelectedItem);
         }
 
         /// <summary>
-        /// Обработчик события "нажатие на кнопку "Вычислить""
+        /// РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ "РЅР°Р¶Р°С‚РёРµ РЅР° РєРЅРѕРїРєСѓ "Р’С‹С‡РёСЃР»РёС‚СЊ""
         /// </summary>
-        /// <param name="sender">Отправитель события</param>
-        /// <param name="e">Аргументы события</param>
+        /// <param name="sender">РћС‚РїСЂР°РІРёС‚РµР»СЊ СЃРѕР±С‹С‚РёСЏ</param>
+        /// <param name="e">РђСЂРіСѓРјРµРЅС‚С‹ СЃРѕР±С‹С‚РёСЏ</param>
         private void btn_calculate_Click(object sender, EventArgs e)
         {
             double operand1 = ParseTextBoxValue(textBox1);
@@ -68,10 +68,10 @@ namespace CalcForm
         }
 
         /// <summary>
-        /// Получает значения из поля ввода
+        /// РџРѕР»СѓС‡Р°РµС‚ Р·РЅР°С‡РµРЅРёСЏ РёР· РїРѕР»СЏ РІРІРѕРґР°
         /// </summary>
-        /// <param name="textBox">Поле ввода</param>
-        /// <returns>Значение типа double</returns>
+        /// <param name="textBox">РџРѕР»Рµ РІРІРѕРґР°</param>
+        /// <returns>Р—РЅР°С‡РµРЅРёРµ С‚РёРїР° double</returns>
         private double ParseTextBoxValue(TextBox textBox)
         {
             if (textBox.TextLength == 0) return 0;
@@ -79,10 +79,10 @@ namespace CalcForm
         }
 
         /// <summary>
-        /// Обработчик события "нажатие на кнопку "Очистить все поля""
+        /// РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ "РЅР°Р¶Р°С‚РёРµ РЅР° РєРЅРѕРїРєСѓ "РћС‡РёСЃС‚РёС‚СЊ РІСЃРµ РїРѕР»СЏ""
         /// </summary>
-        /// <param name="sender">Отправитель события</param>
-        /// <param name="e">Аргументы события</param>
+        /// <param name="sender">РћС‚РїСЂР°РІРёС‚РµР»СЊ СЃРѕР±С‹С‚РёСЏ</param>
+        /// <param name="e">РђСЂРіСѓРјРµРЅС‚С‹ СЃРѕР±С‹С‚РёСЏ</param>
         private void btn_clear_all_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
