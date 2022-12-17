@@ -1,4 +1,6 @@
 ﻿
+using System.Windows.Forms;
+
 namespace CalcForm
 {
     partial class Form1

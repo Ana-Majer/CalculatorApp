@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CalcForm</name>
+    </assembly>
+    <members>
+        <member name="T:CalcForm.Form1">
+            <summary>
+            Главная форма приложения
+            </summary>
+        </member>
+        <member name="F:CalcForm.Form1.operations">
+            <summary>
+            Словарь операций 
+            </summary>
+        </member>
+        <member name="F:CalcForm.Form1.UnaryOperations">
+            <summary>
+            Список унарных операций 
+            </summary>
+        </member>
+        <member name="M:CalcForm.Form1.#ctor">
+            <summary>
+            Конструктор по умолчанию
+            </summary>
+        </member>
+        <member name="M:CalcForm.Form1.list_operations_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Обработчик события изменения индекса в списке операций
+            </summary>
+            <param name="sender">Отправитель события</param>
+            <param name="e">Аргументы события</param>
+        </member>
+        <member name="M:CalcForm.Form1.btn_calculate_Click(System.Object,System.EventArgs)">
+            <summary>
+            Обработчик события "нажатие на кнопку "Вычислить""
+            </summary>
+            <param name="sender">Отправитель события</param>
+            <param name="e">Аргументы события</param>
+        </member>
+        <member name="M:CalcForm.Form1.ParseTextBoxValue(System.Windows.Forms.TextBox)">
+            <summary>
+            Получает значения из поля ввода
+            </summary>
+            <param name="textBox">Поле ввода</param>
+            <returns>Значение типа double</returns>
+        </member>
+        <member name="M:CalcForm.Form1.btn_clear_all_Click(System.Object,System.EventArgs)">
+            <summary>
+            Обработчик события "нажатие на кнопку "Очистить все поля""
+            </summary>
+            <param name="sender">Отправитель события</param>
+            <param name="e">Аргументы события</param>
+        </member>
+        <member name="F:CalcForm.Form1.components">
+            <summary>
+            Обязательная переменная конструктора.
+            </summary>
+        </member>
+        <member name="M:CalcForm.Form1.Dispose(System.Boolean)">
+            <summary>
+            Освободить все используемые ресурсы.
+            </summary>
+            <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        </member>
+        <member name="M:CalcForm.Form1.InitializeComponent">
+            <summary>
+            Требуемый метод для поддержки конструктора — не изменяйте 
+            содержимое этого метода с помощью редактора кода.
+            </summary>
+        </member>
+        <member name="T:CalcForm.OperationsFactory">
+            <summary>
+            Создает списки операций и выполняет преобразования
+            </summary>
+        </member>
+        <member name="M:CalcForm.OperationsFactory.getOperations">
+            <summary>
+            Создает словарь операций
+            </summary>
+            <returns>Словарь операций</returns>
+        </member>
+        <member name="M:CalcForm.OperationsFactory.ToRad(System.Double)">
+            <summary>
+            Переводит градусы в радианы
+            </summary>
+            <param name="grad">Угол в градусах</param>
+            <returns>Угол в радианах</returns>
+        </member>
+        <member name="M:CalcForm.OperationsFactory.getUnaryOperations">
+            <summary>
+            Создает список унарных операций
+            </summary>
+            <returns>Список унарных операций</returns>
+        </member>
+        <member name="M:CalcForm.Program.Main">
+            <summary>
+            Главная точка входа для приложения
+            </summary>
+        </member>
+    </members>
+</doc>
